@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimura Store - Kimonos BJJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="banner">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="kimuraStore" width="125px">
+                </div>
+
+                <ul id="MenuItens">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#produtos">Loja</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <!-- links para visitante -->
+                    <li class="link-visitante"><a href="cadastro.html">Cadastrar</a></li>
+                    <li class="link-visitante"><a href="login.html">Entrar</a></li>
+                    <!-- links para usuario logado -->
+                    <li class="link-usuario" style="display:none"><a href="loja.html">🛒 Carrinho <span id="badge-carrinho"></span></a></li>
+                    <li class="link-usuario" style="display:none"><a href="#" id="btn-sair">Sair</a></li>
+                    <!-- link admin -->
+                    <li class="link-admin" style="display:none"><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+
+                <img src="img/menu.png" alt="menu" class="menu-celular" onclick="menuCelular()">
+            </nav>
+
+            <!-- BANNER PRINCIPAL -->
+            <div class="linha banner-texto">
+                <div class="col-2">
+                    <h1>Foco. Fibra. <br>Finalização.</h1>
+                    <p>Os melhores kimonos de Jiu-Jitsu para você treinar e competir com estilo.</p>
+                    <br><a href="#produtos" class="btn">Ver Produtos &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="img/banner-1.png" alt="kimono">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- CATEGORIAS -->
+    <section class="categorias">
+        <div class="corpo-categorias">
+            <div class="linha">
+                <div class="col-3">
+                    <img src="img/categoria-1.png" alt="Kimonos">
+                </div>
+                <div class="col-3">
+                    <img src="img/categoria-2.png" alt="Acessórios">
+                </div>
+                <div class="col-3">
+                    <img src="img/categoria-3.png" alt="Faixas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE A LOJA -->
+    <section class="sobre" id="sobre">
+        <div class="corpo-categorias">
+            <h2 class="titulo">Sobre a Kimura Store</h2>
+            <div class="linha">
+                <div class="col-2">
+                    <img src="img/sobre-1.png" alt="Nossa loja">
+                </div>
+                <div class="col-2">
+                    <h3>A loja dos lutadores</h3>
+                    <br>
+                    <p>A Kimura Store nasceu da paixão pelo Jiu-Jitsu. Somos especializados em kimonos e acessórios de alta qualidade para atletas de todos os níveis, do iniciante ao faixa preta.</p>
+                    <br>
+                    <p>Nossos produtos passam por rigorosos testes de qualidade e são aprovados por atletas profissionais. Aqui você encontra o melhor equipamento para sua jornada no tatame.</p>
+                </div>
+            </div>
+            <div class="linha" style="margin-top: 40px;">
+                <div class="col-2">
+                    <p>Trabalhamos com as melhores marcas nacionais e internacionais, garantindo durabilidade e conforto para seus treinos. Nossos kimonos são fabricados com tecido de alta gramatura, reforçados nas costuras e aprovados pela IBJJF.</p>
+                </div>
+                <div class="col-2">
+                    <img src="img/sobre-2.png" alt="Nossos produtos">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTOS EM DESTAQUE -->
+    <section class="corpo-categorias" id="produtos">
+        <h2 class="titulo">Produtos em Destaque</h2>
+
+        <div class="linha">
+            <div class="col-4">
+                <img src="img/produto-1.jpg" alt="Kimono Adulto Branco">
+                <h4>Kimono Adulto Branco</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 350,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P001')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-2.jpg" alt="Kimono Adulto Azul">
+                <h4>Kimono Adulto Azul</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 370,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P002')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-3.jpg" alt="Kimono Adulto Preto">
+                <h4>Kimono Adulto Preto</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 380,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P003')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-4.jpg" alt="Kimono Feminino">
+                <h4>Kimono Feminino</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 360,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P004')">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <h2 class="titulo">Novidades</h2>
+
+        <div class="linha">
+            <div class="col-4">
+                <img src="img/produto-5.jpg" alt="Kimono Infantil">
+                <h4>Kimono Infantil Branco</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 220,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P005')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-6.jpg" alt="Rashguard">
+                <h4>Rashguard Manga Longa</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 180,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P006')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-7.jpg" alt="Shorts de Treino">
+                <h4>Shorts de Treino</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 120,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P007')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-8.jpg" alt="Faixa Branca">
+                <h4>Faixa Branca</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 35,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P008')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-9.jpg" alt="Faixa Azul">
+                <h4>Faixa Azul</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 40,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P009')">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/produto-10.jpg" alt="Protetor Bucal">
+                <h4>Protetor Bucal Duplo</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 55,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P010')">Adicionar ao Carrinho</button>
+            </div>
+
+          <div class="col-4">
+                <img src="img/produto-11.jpg" alt="Protetor Bucal">
+                <h4>Protetor Bucal Duplo</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 55,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P011')">Adicionar ao Carrinho</button>
+            </div>
+
+          <div class="col-4">
+                <img src="img/produto-12.jpg" alt="Protetor Bucal">
+                <h4>Protetor Bucal Duplo</h4>
+                <div class="classificacao">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <p class="preco">R$ 55,00</p>
+                <button class="btn btn-produto" onclick="adicionarCarrinho('P012')">Adicionar ao Carrinho</button>
+            </div>
+    </section>
+
+
+
+    <!-- OFERTA ESPECIAL -->
+    <div class="ofertas">
+        <div class="corpo-categorias">
+            <div class="linha">
+                <div class="col-2">
+                    <img src="img/banner-2.png" alt="Oferta" class="oferta-img">
+                </div>
+                <div class="col-2">
+                    <p>Produto exclusivo da Kimura Store</p>
+                    <h1>Adidas Limited Edition</h1>
+                    <small>Kimono oficial de competição, aprovado pela IBJJF. Tecido premium com reforço nas costuras e logotipo bordado.</small>
+                    <br><br><a href="loja.html" class="btn">Comprar Agora &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+        <div class="corpo-categorias">
+            <h2 class="titulo">Contato</h2>
+            <div class="linha">
+
+                <div class="col-2">
+                    <h3>Fale Conosco</h3>
+                    <br>
+                    <p>📍 Rua dos Tatames, 42 - Florianópolis, SC</p>
+                    <br>
+                    <p>📞 (48) 99999-0000</p>
+                    <br>
+                    <p>✉️ contato@kimurastore.com.br</p>
+                </div>
+
+                <div class="col-2">
+                    <form id="form-contato">
+                        <div class="campo">
+                            <label>Nome</label>
+                            <input type="text" id="contato-nome" placeholder="Seu nome">
+                        </div>
+                        <div class="campo">
+                            <label>E-mail</label>
+                            <input type="email" id="contato-email" placeholder="seu@email.com">
+                        </div>
+                        <div class="campo">
+                            <label>Mensagem</label>
+                            <textarea id="contato-msg" rows="4" placeholder="Sua mensagem..."></textarea>
+                        </div>
+                        <button type="button" class="btn" onclick="enviarContato()">Enviar &#8594;</button>
+                        <p id="msg-contato" style="display:none; color:green; margin-top:10px;">Mensagem enviada com sucesso!</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="linha">
+                <div class="rodape-col-1">
+                    <h3>Baixe o nosso app</h3>
+                    <p>Disponível nas principais plataformas</p>
+                    <div class="app-logo">
+                        <img src="img/google.png" alt="Google Play">
+                        <img src="img/apple.png" alt="App Store">
+                    </div>
+                </div>
+                <div class="rodape-col-2">
+                    <img src="img/logo-2.png" alt="Logo" height="100px" width="75px">
+                </div>
+                <div class="rodape-col-3">
+                    <h3>Mais Informações</h3>
+                    <ul>
+                        <li>Cupons</li>
+                        <li>Política de Privacidade</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
+                <div class="rodape-col-4">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>X</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="direitos">&#169; Todos os direitos reservados a KIMURASTORE.COM.BR</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

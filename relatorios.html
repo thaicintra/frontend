@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Kimura Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="banner">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="kimuraStore" width="125px">
+                </div>
+                <ul id="MenuItens">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#produtos">Loja</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li class="link-visitante"><a href="cadastro.html">Cadastrar</a></li>
+                    <li class="link-visitante"><a href="login.html">Entrar</a></li>
+                    <li class="link-usuario" style="display:none"><a href="loja.html">🛒 Carrinho <span id="badge-carrinho"></span></a></li>
+                    <li class="link-usuario" style="display:none"><a href="#" id="btn-sair">Sair</a></li>
+                    <li class="link-admin" style="display:none"><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+                <img src="img/menu.png" alt="menu" class="menu-celular" onclick="menuCelular()">
+            </nav>
+        </div>
+    </header>
+
+    <!-- CABEÇALHO DO RELATÓRIO -->
+    <div class="relatorio-cabecalho">
+        <div class="corpo-categorias">
+            <div class="linha">
+                <div>
+                    <h2>Kimura Store — Área Administrativa</h2>
+                </div>
+                <div>
+                    <p>Gerado em: <span id="data-relatorio"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO DOS RELATÓRIOS -->
+    <main class="corpo-categorias" style="padding-top: 40px; padding-bottom: 40px;">
+
+        <!-- CLIENTES -->
+        <div class="caixa-relatorio">
+            <div class="linha" style="justify-content: space-between;">
+                <h3>Clientes Cadastrados</h3>
+                <span id="total-clientes" class="badge-total">0 registros</span>
+            </div>
+            <br>
+            <input type="text" id="busca-clientes" class="campo-busca" placeholder="Buscar por nome, ID, e-mail ou CPF..." oninput="filtrarClientes()">
+            <br>
+            <div class="tabela-wrapper">
+                <table class="tabela-relatorio">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>CPF</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-clientes">
+                        <tr><td colspan="4">Nenhum cliente cadastrado.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <br><br>
+
+        <!-- COMPRAS -->
+        <div class="caixa-relatorio">
+            <div class="linha" style="justify-content: space-between;">
+                <h3>Compras Realizadas</h3>
+                <span id="total-compras" class="badge-total">0 registros</span>
+            </div>
+            <br>
+            <input type="text" id="busca-compras" class="campo-busca" placeholder="Buscar por ID, cliente, data, valor ou produto..." oninput="filtrarCompras()">
+            <br>
+            <div class="tabela-wrapper">
+                <table class="tabela-relatorio">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Data</th>
+                            <th>Produtos</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-compras">
+                        <tr><td colspan="5">Nenhuma compra registrada.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ DO RELATÓRIO -->
+    <div class="relatorio-rodape">
+        <div class="corpo-categorias">
+            <p>Kimura Store — Documento interno. Não distribuir.</p>
+            <p>contato@kimurastore.com.br | (48) 99999-0000</p>
+        </div>
+    </div>
+
+    <!-- RODAPÉ DO SITE -->
+    <footer class="rodape">
+        <div class="container">
+            <p class="direitos">&#169; Todos os direitos reservados a KIMURASTORE.COM.BR</p>
+        </div>
+    </footer>
+
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

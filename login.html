@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Kimura Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="banner">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="kimuraStore" width="125px">
+                </div>
+                <ul id="MenuItens">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#produtos">Loja</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li class="link-visitante"><a href="cadastro.html">Cadastrar</a></li>
+                    <li class="link-visitante"><a href="login.html">Entrar</a></li>
+                    <li class="link-usuario" style="display:none"><a href="loja.html">🛒 Carrinho <span id="badge-carrinho"></span></a></li>
+                    <li class="link-usuario" style="display:none"><a href="#" id="btn-sair">Sair</a></li>
+                    <li class="link-admin" style="display:none"><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+                <img src="img/menu.png" alt="menu" class="menu-celular" onclick="menuCelular()">
+            </nav>
+        </div>
+    </header>
+
+    <!-- FORMULÁRIO DE LOGIN -->
+    <main class="pagina-form">
+        <div class="caixa-form">
+            <h2>Entrar</h2>
+            <p>Acesse sua conta para realizar compras.</p>
+            <br>
+
+            <div class="campo">
+                <label>E-mail</label>
+                <input type="email" id="login-email" placeholder="seu@email.com">
+            </div>
+
+            <div class="campo">
+                <label>Senha</label>
+                <input type="password" id="login-senha" placeholder="Sua senha">
+            </div>
+
+            <p id="erro-login" class="msg-erro" style="display:none;"></p>
+
+            <button class="btn btn-full" onclick="fazerLogin()">Entrar</button>
+
+            <p class="link-form">Não tem conta? <a href="cadastro.html">Cadastrar</a></p>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p class="direitos">&#169; Todos os direitos reservados a KIMURASTORE.COM.BR</p>
+        </div>
+    </footer>
+
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

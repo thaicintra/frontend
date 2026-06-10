@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Kimura Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="banner">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.png" alt="kimuraStore" width="125px">
+                </div>
+                <ul id="MenuItens">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#produtos">Loja</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li class="link-visitante"><a href="cadastro.html">Cadastrar</a></li>
+                    <li class="link-visitante"><a href="login.html">Entrar</a></li>
+                    <li class="link-usuario" style="display:none"><a href="loja.html">🛒 Carrinho <span id="badge-carrinho"></span></a></li>
+                    <li class="link-usuario" style="display:none"><a href="#" id="btn-sair">Sair</a></li>
+                    <li class="link-admin" style="display:none"><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+                <img src="img/menu.png" alt="menu" class="menu-celular" onclick="menuCelular()">
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO DA LOJA -->
+    <main class="corpo-categorias" style="padding-top: 40px; padding-bottom: 40px;">
+
+        <div class="linha" style="align-items: flex-start; gap: 30px;">
+
+            <!-- LISTA DE PRODUTOS -->
+            <div class="coluna-produtos">
+                <h2 class="titulo" style="text-align:left; margin-bottom: 30px;">Nossos Produtos</h2>
+
+                <div class="linha" id="lista-produtos">
+                    <!-- produtos gerados pelo script.js -->
+                </div>
+            </div>
+
+            <!-- CARRINHO -->
+            <div class="caixa-carrinho">
+                <h3>Meu Carrinho</h3>
+                <br>
+
+                <!-- aviso para visitante -->
+                <div id="aviso-login" style="display:none;">
+                    <p>Faça <a href="login.html">login</a> para adicionar produtos ao carrinho.</p>
+                </div>
+
+                <!-- carrinho vazio -->
+                <div id="carrinho-vazio" style="display:none;">
+                    <p>Seu carrinho está vazio.</p>
+                </div>
+
+                <!-- itens do carrinho -->
+                <div id="carrinho-itens">
+                    <table class="tabela-carrinho">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Qtd</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-carrinho">
+                            <!-- linhas geradas pelo script.js -->
+                        </tbody>
+                    </table>
+
+                    <div class="rodape-carrinho">
+                        <strong>Total: <span id="total-carrinho">R$ 0,00</span></strong>
+                        <button class="btn" id="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+                    </div>
+                </div>
+
+                <!-- mensagem de sucesso após compra -->
+                <div id="compra-ok" style="display:none;">
+                    <p style="color:green;"><strong>Compra realizada!</strong></p>
+                    <p>Pedido: <span id="id-compra"></span></p>
+                    <br>
+                    <a href="index.html" class="btn">Continuar Comprando</a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p class="direitos">&#169; Todos os direitos reservados a KIMURASTORE.COM.BR</p>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

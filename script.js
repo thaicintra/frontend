@@ -194,6 +194,10 @@ function adicionarCarrinho(produtoId) {
 
     addCarrinho(produto);
     atualizarBadge();
+
+    // atualiza carrinho em tempo real se estiver na loja
+    renderizarCarrinho();
+
     alert(produto.nome + ' adicionado ao carrinho!');
 }
 
@@ -254,9 +258,9 @@ function renderizarCarrinho() {
         tr.innerHTML =
             '<td>' + item.nome + '</td>' +
             '<td>' +
-                '<button class="btn-qtd" onclick="mudarQtd(\'' + item.id + '\', -1)">−</button> ' +
-                item.quantidade +
-                ' <button class="btn-qtd" onclick="mudarQtd(\'' + item.id + '\', 1)">+</button>' +
+            '<button class="btn-qtd" onclick="mudarQtd(\'' + item.id + '\', -1)">−</button> ' +
+            item.quantidade +
+            ' <button class="btn-qtd" onclick="mudarQtd(\'' + item.id + '\', 1)">+</button>' +
             '</td>' +
             '<td>' + formatarPreco(item.preco * item.quantidade) + '</td>' +
             '<td><button class="btn-remover" onclick="tirarItem(\'' + item.id + '\')">✕</button></td>';
@@ -403,4 +407,78 @@ if (document.getElementById('lista-clientes')) {
     document.getElementById('data-relatorio').textContent = new Date().toLocaleString('pt-BR');
     renderizarClientes(getClientes());
     renderizarCompras(getCompras());
+}
+
+// ----- MINHAS COMPRAS -----
+
+function renderizarMinhasCompras() {
+    var container = document.getElementById('minhas-compras-lista');
+    if (!container) return;
+
+    if (!estaLogado()) {
+        window.location.href = 'login.html';
+        return;
+    }
+
+    var sessao  = getSessao();
+    var compras = getCompras().filter(function(c) { return c.clienteId === sessao.id; });
+
+    // ordena da mais recente para a mais antiga
+    compras = compras.reverse();
+
+    if (compras.length === 0) {
+        container.innerHTML =
+            '<div class="compra-vazia">' +
+            '<p>Você ainda não fez nenhuma compra.</p>' +
+            '<a href="loja.html" class="btn" style="margin-top:15px;">Ver Produtos</a>' +
+            '</div>';
+        return;
+    }
+
+    container.innerHTML = '';
+
+    compras.forEach(function(c) {
+        var statusInfo = getStatusInfo(c.status);
+
+        var itens = c.produtos.map(function(p) {
+            return '<div class="compra-item-linha">' +
+                '<span>' + p.nome + '</span>' +
+                '<span>x' + p.quantidade + '</span>' +
+                '<span>' + formatarPreco(p.preco * p.quantidade) + '</span>' +
+                '</div>';
+        }).join('');
+
+        var div = document.createElement('div');
+        div.className = 'caixa-compra';
+        div.innerHTML =
+            '<div class="compra-cabecalho">' +
+            '<div>' +
+            '<span class="compra-id">Pedido ' + c.id + '</span>' +
+            '<span class="compra-data">📅 ' + c.data + '</span>' +
+            '</div>' +
+            '<span class="badge-status ' + statusInfo.classe + '">' + statusInfo.icone + ' ' + statusInfo.texto + '</span>' +
+            '</div>' +
+            '<div class="compra-itens">' + itens + '</div>' +
+            '<div class="compra-rodape">' +
+            '<span>Total</span>' +
+            '<strong>' + formatarPreco(c.total) + '</strong>' +
+            '</div>';
+
+        container.appendChild(div);
+    });
+}
+
+function getStatusInfo(status) {
+    switch (status) {
+        case 'enviado':
+            return { texto: 'Enviado', icone: '🚚', classe: 'status-enviado' };
+        case 'entregue':
+            return { texto: 'Entregue', icone: '✅', classe: 'status-entregue' };
+        default:
+            return { texto: 'Pendente', icone: '⏳', classe: 'status-pendente' };
+    }
+}
+
+if (document.getElementById('minhas-compras-lista')) {
+    renderizarMinhasCompras();
 }

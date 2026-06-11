@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Kimura Store</title>
+    <title>Minhas Compras - Kimura Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,39 +34,19 @@
     </div>
 </header>
 
-<!-- FORMULÁRIO DE CADASTRO -->
-<main class="pagina-form">
-    <div class="caixa-form">
-        <h2>Criar Conta</h2>
-        <p>Preencha os dados abaixo para se cadastrar.</p>
-        <br>
+<!-- CONTEÚDO -->
+<main class="corpo-categorias" style="padding-top: 50px; padding-bottom: 60px;">
 
-        <div class="campo">
-            <label>Nome completo</label>
-            <input type="text" id="cad-nome" placeholder="Seu nome completo">
-        </div>
+    <h2 class="titulo">Minhas Compras</h2>
 
-        <div class="campo">
-            <label>E-mail</label>
-            <input type="email" id="cad-email" placeholder="seu@email.com">
-        </div>
-
-        <div class="campo">
-            <label>CPF</label>
-            <input type="text" id="cad-cpf" placeholder="000.000.000-00" maxlength="14">
-        </div>
-
-        <div class="campo">
-            <label>Senha</label>
-            <input type="password" id="cad-senha" placeholder="Mínimo 6 caracteres">
-        </div>
-
-        <p id="erro-cadastro" class="msg-erro" style="display:none;"></p>
-
-        <button class="btn btn-full" onclick="cadastrar()">Cadastrar</button>
-
-        <p class="link-form">Já tem conta? <a href="login.html">Entrar</a></p>
+    <div id="minhas-compras-lista">
+        <!-- preenchido pelo script.js -->
     </div>
+
+    <div style="text-align:center; margin-top: 30px;">
+        <a href="loja.html" class="btn">🛒 Continuar Comprando</a>
+    </div>
+
 </main>
 
 <!-- RODAPÉ -->

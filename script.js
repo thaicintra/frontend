@@ -2,10 +2,10 @@
 
 // lista de produtos da loja
 var produtos = [
-    { id: 'P001', nome: 'Kimono Adulto Branco',   preco: 350.00, imagem: 'img/produto-1.jpg',  descricao: 'Kimono A2 em algodão 100%, ideal para treino e competição.' },
-    { id: 'P002', nome: 'Kimono Adulto Azul',      preco: 370.00, imagem: 'img/produto-2.jpg',  descricao: 'Kimono A2 azul royal, aprovado pela IBJJF.' },
-    { id: 'P003', nome: 'Kimono Adulto Preto',     preco: 380.00, imagem: 'img/produto-3.jpg',  descricao: 'Kimono A2 preto com reforço nos joelhos.' },
-    { id: 'P004', nome: 'Kimono Feminino',         preco: 360.00, imagem: 'img/produto-4.jpg',  descricao: 'Corte especial feminino, tecido leve e resistente.' },
+    { id: 'P001', nome: 'Kimono Adulto Branco',   preco: 350.00, imagem: 'img/kimonoBranco.webp',  descricao: 'Kimono A2 em algodão 100%, ideal para treino e competição.' },
+    { id: 'P002', nome: 'Kimono Adulto Azul',      preco: 370.00, imagem: 'img/kimonoAzul.webp',  descricao: 'Kimono A2 azul royal, aprovado pela IBJJF.' },
+    { id: 'P003', nome: 'Kimono Adulto Preto',     preco: 380.00, imagem: 'img/kimonoPreto.jpg',  descricao: 'Kimono A2 preto com reforço nos joelhos.' },
+    { id: 'P004', nome: 'Kimono Feminino',         preco: 360.00, imagem: 'img/kimonoFeminino.webp',  descricao: 'Corte especial feminino, tecido leve e resistente.' },
     { id: 'P005', nome: 'Kimono Infantil Branco',  preco: 220.00, imagem: 'img/produto-5.jpg',  descricao: 'Kimono M0 para crianças de 4 a 8 anos.' },
     { id: 'P006', nome: 'Rashguard Manga Longa',   preco: 180.00, imagem: 'img/produto-6.jpg',  descricao: 'Compressão alta, proteção UV, ideal para No-Gi.' },
     { id: 'P007', nome: 'Shorts de Treino',        preco: 120.00, imagem: 'img/produto-7.jpg',  descricao: 'Bermuda MMA com bolsos laterais e elástico reforçado.' },

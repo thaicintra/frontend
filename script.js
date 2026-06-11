@@ -6,14 +6,14 @@ var produtos = [
     { id: 'P002', nome: 'Kimono Adulto Azul',      preco: 370.00, imagem: 'img/kimonoAzul.webp',  descricao: 'Kimono A2 azul royal, aprovado pela IBJJF.' },
     { id: 'P003', nome: 'Kimono Adulto Preto',     preco: 380.00, imagem: 'img/kimonoPreto.jpg',  descricao: 'Kimono A2 preto com reforço nos joelhos.' },
     { id: 'P004', nome: 'Kimono Feminino',         preco: 360.00, imagem: 'img/kimonoFeminino.webp',  descricao: 'Corte especial feminino, tecido leve e resistente.' },
-    { id: 'P005', nome: 'Kimono Infantil Branco',  preco: 220.00, imagem: 'img/produto-5.jpg',  descricao: 'Kimono M0 para crianças de 4 a 8 anos.' },
-    { id: 'P006', nome: 'Rashguard Manga Longa',   preco: 180.00, imagem: 'img/produto-6.jpg',  descricao: 'Compressão alta, proteção UV, ideal para No-Gi.' },
-    { id: 'P007', nome: 'Shorts de Treino',        preco: 120.00, imagem: 'img/produto-7.jpg',  descricao: 'Bermuda MMA com bolsos laterais e elástico reforçado.' },
-    { id: 'P008', nome: 'Faixa Branca',            preco:  35.00, imagem: 'img/produto-8.jpg',  descricao: 'Faixa de algodão A2, 4 cm de largura.' },
-    { id: 'P009', nome: 'Faixa Azul',              preco:  40.00, imagem: 'img/produto-9.jpg',  descricao: 'Faixa de algodão A2, aprovada pela IBJJF.' },
-    { id: 'P010', nome: 'Protetor Bucal Duplo',    preco:  55.00, imagem: 'img/produto-10.jpg', descricao: 'Protetor moldável superior e inferior, com estojo.' },
-    { id: 'P011', nome: 'Protetor Bucal Duplo',    preco:  55.00, imagem: 'img/produto-11.jpg', descricao: 'Protetor moldável superior e inferior, com estojo.' },
-    { id: 'P012', nome: 'Protetor Bucal Duplo',    preco:  55.00, imagem: 'img/produto-12.jpg', descricao: 'Protetor moldável superior e inferior, com estojo.' },
+    { id: 'P005', nome: 'Kimono Infantil Branco',  preco: 220.00, imagem: 'img/kimonoInfantil.webp',  descricao: 'Kimono M0 para crianças de 4 a 8 anos.' },
+    { id: 'P006', nome: 'Rashguard Manga Longa',   preco: 180.00, imagem: 'img/rastMangaLonga.webp',  descricao: 'Compressão alta, proteção UV, ideal para No-Gi.' },
+    { id: 'P007', nome: 'Shorts de Treino',        preco: 120.00, imagem: 'img/short.webp',  descricao: 'Bermuda MMA com bolsos laterais e elástico reforçado.' },
+    { id: 'P008', nome: 'Faixa Branca',            preco:  35.00, imagem: 'img/faixaBranca.webp',  descricao: 'Faixa de algodão A2, 4 cm de largura.' },
+    { id: 'P009', nome: 'Faixa Azul',              preco:  40.00, imagem: 'img/faixaAzul.webp',  descricao: 'Faixa de algodão A2, aprovada pela IBJJF.' },
+    { id: 'P010', nome: 'Protetor Bucal Duplo',    preco:  55.00, imagem: 'img/bucal.webp', descricao: 'Protetor moldável superior e inferior, com estojo.' },
+    { id: 'P011', nome: 'Protetor Bucal Duplo',    preco:  55.00, imagem: 'img/bucalDuplo.jpg', descricao: 'Protetor moldável superior e inferior, com estojo.' },
+    { id: 'P012', nome: 'Protetor Bucal ',    preco:  55.00, imagem: 'img/bucalSimples.jpg', descricao: 'Protetor moldável superior, com estojo.' },
 ];
 
 // formata valor em reais

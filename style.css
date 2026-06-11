@@ -7,8 +7,8 @@
 }
 
 :root {
-    --cor-padrao: #ff423b;
-    --cor-padrao-hover: #f3b2e5;
+    --cor-padrao: #003DA5;
+    --cor-padrao-hover: #a8c4f0;
     --cor-fonte: #fff;
     --cor-fonte-p: #555;
     --cor-btn: #563434;
@@ -738,20 +738,9 @@ ul {
     padding: 5px 0;
 }
 
-.compra-item-linha span:first-child {
-    flex: 1;
-}
-
-.compra-item-linha span:nth-child(2) {
-    width: 40px;
-    text-align: center;
-    color: var(--cor-fonte-corpo-leve);
-}
-
-.compra-item-linha span:last-child {
-    width: 100px;
-    text-align: right;
-}
+.compra-item-linha span:first-child { flex: 1; }
+.compra-item-linha span:nth-child(2) { width: 40px; text-align: center; color: var(--cor-fonte-corpo-leve); }
+.compra-item-linha span:last-child { width: 100px; text-align: right; }
 
 .compra-rodape {
     display: flex;
